@@ -19,7 +19,7 @@ if (!isPullRequestAuthor) {
   alert('Looks like you are not the pull request author?')
 }
 
-var status = document.querySelector('[title^=Status:]').getAttribute('title')
+var status = document.querySelector('[title^="Status:"]').getAttribute('title')
 var isOpen = /^Status:\s(.*)$/.exec(status)[1] === 'Open'
 
 if (!isOpen) {
@@ -31,7 +31,7 @@ function $ (selector) {
   return [].slice.call(lookup)
 }
 
-var reviewers = $('[aria-label*=approved these changes]')
+var reviewers = $('[aria-label*="approved these changes"]')
   .map(function (reviewer) {
     return /[^\s]+/.exec(reviewer.getAttribute('aria-label'))[0]
   })
