@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "parcel build index.html",
+    "prebuild": "npm run clean -s && cp index.dev.html index.html && replace --silent '{bookmarklet}' `bookmarkletify bookmarklet.js` index.html",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "bookmarkletify": "^1.0.0",
+    "parcel-bundler": "^1.12.4",
+    "replace": "^1.2.0"
+  },
+  "dependencies": {
+    "snarkdown": "^1.2.2"
+  }
+}

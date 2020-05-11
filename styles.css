@@ -1,0 +1,219 @@
+:root {
+  font-size: 100%;
+  --color-primary: #0a0a0a;
+  --color-secondary: #fff;
+  --color-muted: #f0f0f0;
+  --radix: 3px;
+}
+
+::-moz-selection {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+*:not(:disabled):focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(237, 240, 242, 0.8);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue',
+    sans-serif;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  display: inline-block;
+  color: currentColor;
+  text-decoration: none;
+}
+
+a:not(.button):hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+}
+
+code {
+  position: relative;
+  padding: 0.2rem 0.4rem;
+  border-radius: var(--radix);
+  margin: 0;
+  display: inline-block;
+  font-family: Menlo, monospace;
+  font-size: 85%;
+  background-color: var(--color-muted);
+}
+
+header,
+footer {
+  position: absolute;
+  left: 2rem;
+}
+
+header {
+  top: 2rem;
+}
+
+footer {
+  bottom: 2rem;
+}
+
+.draggable {
+  cursor: grab;
+}
+.draggable:active {
+  cursor: grabbing;
+}
+
+.button {
+  min-width: 11rem;
+  text-align: center;
+  user-select: none;
+  font-size: 1rem;
+  border-radius: var(--radix);
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.button-secondary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border-color: currentColor;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-color: transparent;
+}
+
+.disabled {
+  cursor: not-allowed;
+  color: #ccc;
+  background-color: var(--color-muted);
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-text {
+  text-align: center;
+}
+
+.vertically-centered {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.full-size {
+  width: 100%;
+  height: 100%;
+}
+
+.spacer-y {
+  padding: 1rem 0;
+}
+
+.spacer-x {
+  padding: 0 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+.default-cursor {
+  cursor: default;
+}
+
+.preview {
+  min-width: 40vw;
+  font-size: 0.9rem;
+}
+
+.preview-header {
+  background-color: #f1f8ff;
+  border: 1px solid #c0d3eb;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #586069;
+  padding: 0.75rem 1rem;
+}
+
+.preview-body {
+  padding: 1rem 1rem;
+  border-left: 1px solid #c0d3eb;
+  border-right: 1px solid #c0d3eb;
+  border-bottom: 1px solid #c0d3eb;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.preview-badge {
+  cursor: default;
+  color: #586069;
+  border: 1px solid #1b1f2326;
+  border-radius: var(--radix);
+  padding: 2px 4px;
+  font-size: 85%;
+}
+
+.logo {
+  display: block;
+  width: 1.25rem;
+  padding-right: 2rem;
+}
+
+@media screen and (max-width: 40em) {
+  .full-width-on-mobile {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary: #fff;
+    --color-secondary: #0a0a0a;
+    --color-muted: #202020;
+  }
+}
