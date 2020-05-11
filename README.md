@@ -7,7 +7,7 @@
 
 [Visit the website][website] to install and try it out.
 
-<img src=./screenshot.webp width=60%>
+<img src=./screenshot.png width=60%>
 
 ## License
 
