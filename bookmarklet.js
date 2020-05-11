@@ -48,7 +48,13 @@ if (!hasReviewers) {
   alert('Looks like nobody has approved your pull request yet?')
 }
 
-var message = localStorage.getItem(STORAGE_KEY) || 'Thanks %s!'
+var message = 'Thanks %s!'
+
+try {
+  message = localStorage.getItem(STORAGE_KEY)
+} catch (error) {
+  console.error(error)
+}
 
 var input = document.getElementById('new_comment_field')
 var submit = $('button[type=submit]').find(function (node) {
